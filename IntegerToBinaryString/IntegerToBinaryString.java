@@ -11,7 +11,7 @@ class IntegerToBinaryString
         int i = Integer.parseInt(args[0]);
         StringBuffer buf = new StringBuffer();
         do {
-	    //insert bit in leftmost position
+	    //insert rightmost bit and'd with mask of 1 in leftmost position
             buf.insert(0, i & 1);
             //discard rightmost bit via shift / assignment
             i >>= 1;
